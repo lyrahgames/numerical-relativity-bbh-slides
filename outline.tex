@@ -1,0 +1,115 @@
+\documentclass[twocolumn]{article}
+\usepackage{standard}
+\geometry{a4paper,left=20mm,right=20mm,bottom=30mm,top=30mm}
+\pagestyle{empty}
+\usepackage{times}
+\begin{document}
+  \twocolumn[\begin{center}
+    \large
+    \textbf{Presentation: Simulating the Evolution of Binary Black Holes}\\
+    \textbf{Outline}
+  \end{center}]
+  \medskip
+
+  \section{Introduction} % (fold)
+  \label{sec:introduction}
+    \begin{itemize}
+      \item show video of simulation
+      \item What is numerical relativity?
+      \item Why do we need it?
+    \end{itemize}
+  % section introduction (end)
+
+  \section{Background} % (fold)
+  \label{sec:background}
+    \begin{itemize}
+      \item spacetime, manifolds, metrics
+      \item tensors, curvature, geodesics
+      \item Einstein field equations
+      \item analytical solutions
+        \begin{itemize}
+          \item Schwarzschild black holes
+          \item Kerr black holes
+        \end{itemize}
+    \end{itemize}
+  % section background (end)
+
+  \section{Basic Idea} % (fold)
+  \label{sec:basic_idea}
+    \begin{itemize}
+      \item What do we have to do for the simulation?
+      \item Why do we have to do this?
+    \end{itemize}
+    \begin{itemize}
+      \item 3+1 decomposition
+      \item construction of initial data
+      \item choosing coordinates
+      \item matter sources
+      \item locating black hole horizons
+      \item recasting the evolution equations
+      \item numerical methods
+      \item binary black hole evolution
+    \end{itemize}
+  % section basic_idea (end)
+
+  \section{$3+1$ Decomposition of Einstein's Equations} % (fold)
+    \begin{itemize}
+      \item Why do we have to decompose Einstein's equations?
+      \item foliations of spacetime
+      \item extrinsic curvature
+      \item equations of Gauss, Codazzi and Ricci
+      \item constraint and evolution equations
+      \item ADM equations
+    \end{itemize}
+  % section  (end)
+
+  \section{Constructing initial data} % (fold)
+  \label{sec:constructing_initial_data}
+    \begin{itemize}
+      \item conformal transformations
+      \item example methods: conformal transverse-traceless decomposition, conformal thin-sandwich decomposition
+      \item conformal thin-sandwich decomposition
+      \item realistic data modelling
+    \end{itemize}
+  % section constructing_initial_data (end)
+
+  \section{Choosing coordinates} % (fold)
+  \label{sec:choosing_coordinates}
+    \begin{itemize}
+      \item gauge variables: lapse and shift
+      \item geodesic slicing
+      \item example methods: maximal slicing and singularity avoidance, harmonic coordinates
+    \end{itemize}
+  % section choosing_coordinates (end)
+
+  \section{Recasting the Evolution Equations} % (fold)
+  \label{sec:recasting_the_evolution_equations}
+    \begin{itemize}
+      \item instability problem of ADM evolution equations
+      \item example methods: generalized harmonic coordinates, first-order symmetric hyperbolic formulations, BSSN formulation
+      \item BSSN formulation
+    \end{itemize}
+  % section recasting_the_evolution_equations (end)
+
+  \section{Numerical Methods} % (fold)
+  \label{sec:numerical_methods}
+    \begin{itemize}
+      \item classification of partial differential equations
+      \item finite difference methods
+    \end{itemize}
+  % section numerical_methods (end)
+
+  \section{Binary Black Hole Evolution and Results} % (fold)
+  \label{sec:binary_black_hole_evolution_and_results}
+    \begin{itemize}
+      \item show some videos
+      \item gravitational lensing
+      \item inspiral, merge and ringdown
+    \end{itemize}
+  % section binary_black_hole_evolution_and_results (end)
+
+  \section{Conclusion and References} % (fold)
+  \label{sec:references}
+
+  % section references (end)
+\end{document}
