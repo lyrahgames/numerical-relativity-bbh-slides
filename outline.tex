@@ -4,12 +4,16 @@
 \pagestyle{empty}
 \usepackage{times}
 \begin{document}
-  \twocolumn[\begin{center}
-    \large
-    \textbf{Presentation: Simulating the Evolution of Binary Black Holes}\\
-    \textbf{Outline}
-  \end{center}]
-  \medskip
+  \twocolumn[%
+    \begin{center}
+      \large
+      \textbf{Presentation: Simulating the Evolution of Binary Black Holes}\\
+      \textbf{Outline}
+    \end{center}
+    \medskip
+    \tableofcontents
+  ]
+  \cleardoublepage
 
   \section{Introduction} % (fold)
   \label{sec:introduction}
@@ -53,6 +57,8 @@
   % section basic_idea (end)
 
   \section{$3+1$ Decomposition of Einstein's Equations} % (fold)
+    Use the directly the notion of basis vectors.
+
     \begin{itemize}
       \item Why do we have to decompose Einstein's equations?
       \item foliations of spacetime
@@ -61,6 +67,49 @@
       \item constraint and evolution equations
       \item ADM equations
     \end{itemize}
+
+    What?
+
+    Why?
+    \begin{itemize}
+      \item Einstein equations are complicated and do not want to be solved: contain time derivatives of second order, cannot be categorized to find solution method
+      \item simulating 4 dimensions will need crazy amount of computation power and storage because dimension appears in exponent of grid point count
+      \item separating time will result in time evolution (without saving many time slices)
+      \item spatial equations can be categorized with better conditions
+    \end{itemize}
+
+    \subsection{Foliation of Spacetime} % (fold)
+    \label{sub:foliation_of_spacetime}
+      \begin{itemize}
+        \item carving $(M,g_{ab})$ into stack of spatial (spacelike) $3$-dimensional slices $Σ$
+        \item construct spatial metric $γ_{ab}$ and time normal $\Omega_a$ (together with lapse function $α$)
+        \item find method to project spacetime tensors to their spatial and timelike part
+        \item define spatial covariant derivative
+        \item construct spatial Riemann tensor (describes intrinsic curvature of spatial slice)
+        \item describe extrinsic curvature $K_{ab}$
+        \item conditions for $γ_{ab}$ and $K_{ab}$: equations of Gauss, Codazzi and Ricci
+      \end{itemize}
+    % subsection foliation_of_spacetime (end)
+
+    \subsection{The Constraint and Evolution Equations} % (fold)
+    \label{sub:the_constraint_and_evolution_equations}
+      \begin{itemize}
+        \item use Einstein field equations together with Gauss and Codazzi equation
+        \item derive Hamiltonian and momentum constraint
+        \item define shift vector $β^a$ to create natural time derivative
+        \item use equations of Einstein, Gauss and Ricci to derive evolution equation of extrinsic curvature
+        \item derive evolution equation for spatial metric
+      \end{itemize}
+    % subsection the_constraint_and_evolution_equations (end)
+
+    \subsection{Choosing Basis Vectors} % (fold)
+    \label{sub:choosing_basis_vectors}
+      \begin{itemize}
+        \item formulate ADM equations based on $α$ and $β^i$
+        \item examples: Schwarzschild and Kerr black holes
+        \item two comments
+      \end{itemize}
+    % subsection choosing_basis_vectors (end)
   % section  (end)
 
   \section{Constructing initial data} % (fold)
