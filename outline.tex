@@ -1,4 +1,5 @@
 \documentclass[twocolumn]{article}
+\PassOptionsToPackage{english}{babel}
 \usepackage{standard}
 \geometry{a4paper,left=20mm,right=20mm,bottom=30mm,top=30mm}
 \pagestyle{empty}
@@ -159,6 +160,10 @@
 
   \section{Conclusion and References} % (fold)
   \label{sec:references}
+
+  \nocite{*}
+  \bibliographystyle{babplain}
+  \bibliography{references}
 
   % section references (end)
 \end{document}

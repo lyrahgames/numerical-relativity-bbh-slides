@@ -1,6 +1,7 @@
 *
 
 !*.tex
+!*.bib
 
 !utilities
 
