@@ -1,9 +1,12 @@
 \documentclass[twocolumn]{article}
 \PassOptionsToPackage{english}{babel}
 \usepackage{standard}
+\usepackage{times}
+\usepackage{hyperref}
 \geometry{a4paper,left=20mm,right=20mm,bottom=30mm,top=30mm}
 \pagestyle{empty}
-\usepackage{times}
+\urlstyle{same}
+
 \begin{document}
   \twocolumn[%
     \begin{center}
@@ -121,6 +124,25 @@
       \item conformal thin-sandwich decomposition
       \item realistic data modelling
     \end{itemize}
+
+    Why?
+    \begin{itemize}
+      \item physical realistic conditions for binary black holes
+    \end{itemize}
+
+    \begin{itemize}
+      \item initial values to simulate time evolution from a starting point
+      \item initial values have to fulfill constraint equations
+      \item $12-4 = 8$ degrees of freedom, $4$ degrees for spacetime translations, leaving $4$ degrees of freedom for characterizing gravitational field
+      \item separation of longitudinal and transversal part not possible
+    \end{itemize}
+
+    \subsection{Conformal transformations} % (fold)
+    \label{sub:conformal_transformations}
+      \begin{itemize}
+        \item construct conformally related metric $\bar{γ}_{ij}$ based on conformal factor $ψ$
+      \end{itemize}
+    % subsection conformal_transformations (end)
   % section constructing_initial_data (end)
 
   \section{Choosing coordinates} % (fold)
@@ -160,6 +182,8 @@
 
   \section{Conclusion and References} % (fold)
   \label{sec:references}
+
+  % \href{run:videos/Movies - SXS - Simulating eXtreme Spacetimes.mp4}{Click for video}
 
   \nocite{*}
   \bibliographystyle{babplain}
