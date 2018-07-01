@@ -2,10 +2,165 @@
 \PassOptionsToPackage{english}{babel}
 \usepackage{standardslides}
 
-\title{Numerical Relativity: Simulating Binary Black Holes}
+\title{Numerical Relativity: \\ Simulating the Evolution of Binary Black Holes}
+\author{Markus Pawellek}
 
 \begin{document}
   \frame{\titlepage}
+  \begin{frame}{Outline}
+    \footnotesize
+    \hfill\parbox[t][7cm][l]{0.9\textwidth}{\tableofcontents}
+  \end{frame}
+
+  \section{Introduction} % (fold)
+  \label{sec:introduction}
+    \begin{frame}{Introduction}
+      Example:
+      \begin{itemize}
+        \item{
+          \href{run:videos/sxs-bbh-gravitational_lensing_of_gw150914.webm}{\beamergotobutton{SXS: Gravitational Lensing of GW150914}}
+          \href{https://en.wikipedia.org/wiki/File:BBH_gravitational_lensing_of_gw150914.webm}{\beamergotobutton{Web Version}}
+        }
+      \end{itemize}
+      \bigskip
+
+      \pause
+      What is Numerical Relativity?
+      \begin{itemize}
+        \item science about numerical solutions to the Einstein field equations
+      \end{itemize}
+      \bigskip
+
+      \pause
+      Why?
+      \begin{itemize}
+        % \item recreation of cataclysmic cosmic phenomena that are otherwise inaccessible
+        \item prediction and explanation of cosmic phenomena and relativistic instabilities
+      \end{itemize}
+    \end{frame}
+  % section introduction (end)
+
+  \section{Background} % (fold)
+  \label{sec:background}
+    \begin{frame}{Einstein Field Equations}
+      \begin{mybox}
+        \[
+          R_{μν} - \frac{1}{2}Rg_{μν} = \frac{8\pi G}{c^4}T_{μν}
+        \]
+      \end{mybox}
+    \end{frame}
+    \begin{frame}{Vacuum Field Equations}
+      \begin{mybox}
+        \[
+          R_{μν} = 0
+        \]
+      \end{mybox}
+    \end{frame}
+
+    \begin{frame}{Analytical Solutions}
+      Schwarzschild Metric:
+      \[
+        (g_{μν})(t,r,ϑ,φ) = \diagonalMatrix{
+          -\roundBrackets{1-\frac{2M}{r}},\
+          \inverse{\roundBrackets{1-\frac{2M}{r}}},\
+          r^2,\
+          r^2\sin^2 ϑ
+        }
+      \]
+      \medskip
+
+      Other Solutions:
+      \begin{itemize}
+        \item Kerr metric
+        \item Kerr-Newman metric
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Geodesics}
+      \begin{mybox}
+        \[
+          \timeSecondDerivative{x}^i + Γ^i_{mn} \timeDerivative{x}^m\timeDerivative{x}^n = 0
+        \]
+      \end{mybox}
+      \begin{itemize}
+        \item freely-falling test particles and light move along geodesic curves
+      \end{itemize}
+      \bigskip
+
+      Examples:
+      \begin{itemize}
+        \item \href{https://en.wikipedia.org/wiki/File:Newton_versus_Schwarzschild_trajectories.gif}{\beamergotobutton{Newton versus Schwarzschild trajectories}}
+        \item \href{https://en.wikipedia.org/wiki/File:Kerr-Newman-Orbit-1.gif}{\beamergotobutton{Kerr-Newman-Orbit}}
+      \end{itemize}
+    \end{frame}
+  % section background (end)
+
+  \section{The Basic Idea} % (fold)
+  \label{sec:the_basic_idea}
+    \begin{frame}{The Basic Idea}
+      \center
+      \includegraphics{figures/basic_idea_scheme.pdf}
+    \end{frame}
+  % section the_basic_idea (end)
+
+  \section{The Details} % (fold)
+  \label{sec:the_details}
+    \subsection{$3+1$ Decomposition} % (fold)
+    \label{sec:section_name}
+
+    % subsection section_name (end)
+
+    \subsection{Constructing Initial Data} % (fold)
+    \label{sec:constructing_initial_data}
+
+    % subsection constructing_initial_data (end)
+
+    \subsection{Choosing Coordinates} % (fold)
+    \label{sec:choosing_coordinates}
+
+    % subsection choosing_coordinates (end)
+
+    \subsection{Recasting The Evolution Equations} % (fold)
+    \label{sec:recasting_the_evolution_equations}
+
+    % subsection recasting_the_evolution_equations (end)
+
+    \subsection{Numrical Methods} % (fold)
+    \label{sec:numrical_methods}
+
+    % subsection numrical_methods (end)
+  % section the_details (end)
+
+
+  \section{Results} % (fold)
+  \label{sec:results}
+    \begin{frame}
+      Visualizing the results:
+      \begin{itemize}
+        \item{
+          \href{run:videos/sxs-vortex-tendex_visualization-head-on_collision.mp4}{\beamergotobutton{SXS: BBH head-on collision}}
+          \href{https://www.youtube.com/watch?v=4nM6kf2OAFw}{\beamergotobutton{Web Version}}
+        }
+        \item{
+          \href{run:videos/sxs-demo_binary_orbit_and_collision.mp4}{\beamergotobutton{SXS: BBH orbit and collision}}
+          \href{https://www.youtube.com/watch?v=p647WrQd684}{\beamergotobutton{Web Version}}
+        }
+        \item{
+          \href{run:videos/sxs-highly-precessing_bbh_run.mp4}{\beamergotobutton{SXS: Highly precessing BBH}}
+          \href{https://www.youtube.com/watch?v=grA5KfDlsAY}{\beamergotobutton{Web Version}}
+        }
+      \end{itemize}
+      \bigskip
+
+      Going Further:
+      \begin{itemize}
+        \item{
+          \href{run:videos/nasa-colliding_neutron_stars_create_black_hole_and_gamma-ray_burst.webm}{\beamergotobutton{NASA: Colliding Neutron Stars}}
+          \href{https://www.youtube.com/watch?v=ow9JCXy1QdY&t=2s}{\beamergotobutton{Web Version}}
+        }
+      \end{itemize}
+    \end{frame}
+  % section results (end)
 
   \begin{frame}
     \frametitle{References}
