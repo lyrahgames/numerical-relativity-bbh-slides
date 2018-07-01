@@ -12,7 +12,7 @@
 \tikzstyle{materia}=[draw, fill=blue!12, text width=6.0em, text centered,
   minimum height=1.5em]
 % \tikzstyle{practica} = [materia, text width=8em, minimum width=10em, minimum height=3em, rounded corners,]
-\tikzstyle{practica} = [materia,text width = 10em, minimum height=3em, rounded corners]
+\tikzstyle{practica} = [materia,text width = 12em, minimum height=3em, rounded corners]
 \tikzstyle{texto} = [above, text width=6em, text centered]
 \tikzstyle{linepart} = [draw, thick, color=black!50, -latex', dashed]
 \tikzstyle{line} = [draw, thick, color=black!50, -latex']
@@ -45,20 +45,22 @@
   \path [linepart] (#1.east) -- node [above]
     {\scriptsize Transreceptor #2} (#3);}
 
-\usepackage{times}
+\usepackage{bookman}
+% \fontfamily{sf}\selectfont
 
 \begin{document}
+\sffamily
 \begin{tikzpicture}[scale=0.7,transform shape]
 
   % Draw diagram elements
   \path node (p1) [practica] {Einstein Field Equations};
 
   \path (p1.south)+(0.0,-1.0) node (p2) [practica] {$3+1$ Decomposition \\ ADM Equations};
-  \path (p2.south)+(-2.5,-1.5) node (p3) [practica] {Constraint Equations};
-  \path (p2.south)+(2.5,-1.5) node (p4) [practica] {Evolution Equations};
+  \path (p2.south)+(-3.0,-1.5) node (p3) [practica] {Constraint Equations};
+  \path (p2.south)+(3.0,-1.5) node (p4) [practica] {Evolution Equations};
   \path (p4.south)+(0.0,-1.0) node (p5) [practica] {Recasting Evolution Equations};
   \path (p3.south)+(0.0,-1.0) node (p6) [practica] {Constructing Initial Data};
-  \path (p6.south)+(2.5,-1.5) node (p7) [practica] {Choosing Coordinates};
+  \path (p6.south)+(3.0,-1.5) node (p7) [practica] {Choosing Coordinates};
   \path (p7.south)+(0.0,-1.0) node (p8) [practica] {Numerical Methods and Simulation};
 
   % \path (p8.east)+(+5.5,0) node (ur1)[ur] {};
@@ -72,7 +74,7 @@
   % \path (p11.south)+(0.0,-1.5) node (p13) [practica] {Codificador SSTV};
   % \path (p12.south)+(0.0,-1.5) node (p14) [practica] {Decodificador SSTV};
   % \path (p14.east)+(+5.5,0) node (ur4)[ur] {};
-  % \path (p14.south)+(-2.5,-1.5) node (p15) [practica] {Conmutaci\'on telef\'onica};
+  % \path (p14.south)+(-3.0,-1.5) node (p15) [practica] {Conmutaci\'on telef\'onica};
   % \path (p15.south)+(0.0,-1.0) node (p16) [practica] {Telfon\'ia celular an\'aloga};
   % \path (p16.south)+(0.0,-1.5) node (p17) [practica] {Receptor de  telemetr\'ia};
   % \path (p17.south)+(0.0,-1.5) node (p18) [practica] {Gu\'ias de ondas};
@@ -80,17 +82,17 @@
   % Draw arrows between elements
   \path [line] (p1.south) -- node [above] {} (p2);
 
-  \path [line] (p2.south) -- +(0.0,-0.5) -- +(-2.5,-0.5)
+  \path [line] (p2.south) -- +(0.0,-0.5) -- +(-3.0,-0.5)
     -- node [above, midway] {} (p3);
-  \path [line] (p2.south) -- +(0.0,-0.5) -- +(2.5,-0.5) -- node [above,midway] {} (p4) ;
+  \path [line] (p2.south) -- +(0.0,-0.5) -- +(3.0,-0.5) -- node [above,midway] {} (p4) ;
   % \path [line] (p3.south) -- node [above] {} (p5) ;
 
   \path [line] (p3.south) -- node [above] {} (p6);
   \path [line] (p4.south) -- node [above] {} (p5);
 
-  \path [line] (p5.south) -- +(0.0,-0.5) -- +(-2.5,-0.5)
+  \path [line] (p5.south) -- +(0.0,-0.5) -- +(-3.0,-0.5)
     -- node [above, midway] {} (p7);
-  \path [line] (p6.south) -- +(0.0,-0.5) -- +(2.5,-0.5) -- node [above,midway] {} (p7) ;
+  \path [line] (p6.south) -- +(0.0,-0.5) -- +(3.0,-0.5) -- node [above,midway] {} (p7) ;
 
   \path [line] (p7.south) -- node [above] {} (p8);
 
