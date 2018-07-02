@@ -215,9 +215,43 @@
       \end{frame}
     % subsection recasting_the_evolution_equations (end)
 
-    \subsection{Numrical Methods} % (fold)
+    \subsection{Numerical Methods} % (fold)
     \label{sec:numrical_methods}
+      \begin{frame}{Numerical Methods: Classification of PDE}
+        \begin{mybox}
+          \[
+            A\partial_1^2 φ + 2B \partial_1\partial_2 φ + C\partial_2^2 φ = ρ
+          \]
+        \end{mybox}
+        Elliptic:
+        \[
+          AC-B^2 > 0
+        \]
+        Parabolic:
+        \[
+          AC-B^2 = 0
+        \]
+        Hyperbolic:
+        \[
+          AC-B^2 < 0
+        \]
+      \end{frame}
 
+      \begin{frame}{Numerical Methods: Finite Difference Method}
+        Examples of Stencils:
+        \begin{mybox}
+          \[
+            \boxBrackets{\partial_1 φ}_{i,j} = \frac{\boxBrackets{φ}_{i+1,j} - \boxBrackets{φ}_{i-1,j}}{2 h} + \mathcal{O}\roundBrackets{h^2}
+          \]
+        \end{mybox}
+        \bigskip
+
+        \begin{mybox}
+          \[
+            \boxBrackets{\partial^2_1 φ}_{i,j} = \frac{ -\boxBrackets{φ}_{i-2,j} + 16\boxBrackets{φ}_{i-1,j} -30\boxBrackets{φ}_{i,j} +16\boxBrackets{φ}_{i+1,j} - \boxBrackets{φ}_{i+2,j} }{12h^2} + \mathcal{O}\roundBrackets{h^4}
+          \]
+        \end{mybox}
+      \end{frame}
     % subsection numrical_methods (end)
   % section the_details (end)
 
